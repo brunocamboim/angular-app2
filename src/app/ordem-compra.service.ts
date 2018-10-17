@@ -20,7 +20,7 @@ export class OrdemCompraService {
             new RequestOptions({ headers: headers})
         )
         .pipe(
-            map((resposta: Response) => resposta.json())
+            map((resposta: Response) => resposta.json() )
         )
     }
 }

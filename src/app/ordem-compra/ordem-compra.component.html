@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="ordem-compra">
-    <form #formulario="ngForm" (ngSubmit)="confirmarCompra(formulario)" novalidate>
+  <div class="ordem-compra" *ngIf="idPedidoCompra === undefined">
+    <form #formulario="ngForm" (ngSubmit)="confirmarCompra()" novalidate>
     
       <h5>Sua Compra</h5>
       <hr />
@@ -29,7 +29,6 @@
           29.90
         </div>
       </div>
-      
       <div class="form-row" style="background: #FAFAFA; padding: 20px; border-bottom: solid 1px #F0F0F0">
         <div class="form-group col-sm-1">
           <img src="/assets/ofertas/4/img1.jpg" class="img-fluid">
@@ -62,9 +61,6 @@
       </div>
       <br />
 
-      <!-- <pre>{{formulario.value | json}}</pre>
-      <pre>Válido = {{formulario.valid | json}}</pre>
-      <pre>Inválido = {{formulario.invalid | json}}</pre> -->
       <h5>Dados de entrega</h5>
       <hr />
 
@@ -84,7 +80,7 @@
             #inputEndereco="ngModel"
           >
           <small *ngIf="inputEndereco.valid && inputEndereco.touched" class="form-text text-success">Ok</small>
-          <small *ngIf="!inputEndereco.valid && inputEndereco.touched" class="form-text text-danger">Endereço inválido</small>
+          <small *ngIf="!inputEndereco.valid && inputEndereco.touched" class="form-text text-danger">Endereï¿½o invï¿½lido</small>
         </div>
 
         <div class="form-group col-md-2">
@@ -101,7 +97,7 @@
             #inputNumero="ngModel"
           >
           <small *ngIf="inputNumero.valid && inputNumero.touched" class="form-text text-success">Ok</small>
-          <small *ngIf="!inputNumero.valid && inputNumero.touched" class="form-text text-danger">Número inválido</small>
+          <small *ngIf="!inputNumero.valid && inputNumero.touched" class="form-text text-danger">Nï¿½mero invï¿½lido</small>
         </div>
 
         <div class="form-group col-md-4">
@@ -146,5 +142,9 @@
         class="btn btn-primary btn-lg"
       >Cofirmar compra</button>
     </form>
+  </div>
+
+  <div class="ordem-compra" *ngIf="idPedidoCompra !== undefined">
+    <app-ordem-compra-sucesso [idPedidoCompra]="idPedidoCompra"></app-ordem-compra-sucesso>
   </div>
 </div>
