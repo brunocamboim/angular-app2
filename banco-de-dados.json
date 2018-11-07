@@ -255,6 +255,58 @@
       "complemento": "caa",
       "formaPagamento": "dinheiro",
       "id": 10
+    },
+    {
+      "endereco": "rua teste",
+      "numero": "155",
+      "complemento": "casa",
+      "formaPagamento": "dinheiro",
+      "id": 11
+    },
+    {
+      "endereco": "teste final",
+      "numero": "140",
+      "complemento": "casa 3",
+      "formaPagamento": "dinheiro",
+      "id": 12
+    },
+    {
+      "endereco": "casa",
+      "numero": "123",
+      "complemento": "casa",
+      "formaPagamento": "debito",
+      "itens": [
+        {
+          "id": 4,
+          "img": {
+            "url": "/assets/ofertas/4/img1.jpg"
+          },
+          "titulo": "Estância das águas",
+          "descricao_oferta": "Diversão garantida com piscinas, trilhas e muito mais.",
+          "valor": 31.9,
+          "quantidade": 1
+        }
+      ],
+      "id": 13
+    },
+    {
+      "endereco": "teste",
+      "numero": "11",
+      "complemento": "casa",
+      "formaPagamento": "debito",
+      "itens": [
+        {
+          "id": 5,
+          "img": {
+            "url": "/assets/ofertas/5/img1.jpg"
+          },
+          "titulo": "Kart",
+          "descricao_oferta": "Bateria de Kart de 30 minutos.",
+          "valor": 54.9,
+          "quantidade": 1
+        }
+      ],
+      "id": 14
     }
   ]
 }
